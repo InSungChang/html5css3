@@ -9,3 +9,15 @@ git remote -v
 verificar status dos arquivos alterados e adicionados:
 git status
 
+adicionar todos os arquivos alterados e adicionados:
+git add .
+
+roda mais uma vez para verificar se aparece lista de arquivos alterados ou adicionados:
+git status
+
+para adicionar comentário e commitar:
+git commit -m "Estrutura do site"
+
+para sincronizar no GitHub:
+git push
+
