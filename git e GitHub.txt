@@ -15,7 +15,7 @@ git add .
 roda mais uma vez para verificar se aparece lista de arquivos alterados ou adicionados:
 git status
 
-para adicionar comentário e commitar:
+para adicionar comentário e commitar (comprometer):
 git commit -m "Estrutura do site"
 
 para sincronizar no GitHub:
