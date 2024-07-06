@@ -21,3 +21,7 @@ git commit -m "Estrutura do site"
 para sincronizar no GitHub:
 git push
 
+para sincronizar no git e no github:
+git pull
+
+
