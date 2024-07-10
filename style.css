@@ -5,6 +5,18 @@
     joseassis.com.br
 */
 
+/* 
+Mais detalhes sobre Breakpoints CSS - Ponto de quebra
+https://www.hostinger.com.br/tutoriais/breakpoints-css?utm_campaign=Generic-Tutorials-DSA|NT:Se|LO:BR-t4&utm_medium=ppc&gad_source=1&gclid=Cj0KCQjw1qO0BhDwARIsANfnkv_2CQCitnoywINR7YAOPM_ep-VagiTfDJMKahr_c-fWIrNes1YSGiQaAmNGEALw_wcB
+*/
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {...} */
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {...} */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {...} */
+
 /* Importação (Google Fonts) */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
 
@@ -16,6 +28,7 @@
 }
 
 html {
+  /* tipo de rolagem */
   scroll-behavior: smooth;
 }
 
@@ -26,6 +39,7 @@ body {
 
 /* Layout */
 .Container {
+  /* Centraliza conteúdo */
   margin: 0 auto;
 }
 
@@ -66,17 +80,25 @@ body {
 
 /* Botão */
 .Botao {
+  /* retirar sublinhado */
   text-decoration: none;
+
   color: #fff;
   font-size: 1.3em;
+
+  /* consegue definir com 700 porque na importação da font foi definido 700&display=swap */
   font-weight: 700;
+
   background-color: #c00000;
+
+  /* quando usa dois parametros de espaçamento, ele define 10px para cima e para baixo e 40px para esquerda e para direita */
   padding: 10px 40px;
+
   border: 2px solid #fff;
   border-radius: 25px;
 }
 
-/* topo do site */
+/* topo do site  - no id chamado topo - fixa o botão no canto inferior direita*/
 #topo {
   position: fixed;
   right: 10px;
@@ -121,7 +143,9 @@ header {
 }
 
 #logo img {
+  /* reduzir tamanho da imagem */
   width: 208px;
+  /* reduzir tamanho da imagem */
   height: 130.25px;
   margin-top: 10px;
 }
@@ -132,45 +156,69 @@ header {
 
 label {
   font-size: 3em;
+
+  /* para fixar desenho de menu */
   position: fixed;
   top: 5px;
   right: 15px;
+  
   color: rgba(0, 0, 0, 0.5);
 }
 
+/* menu na tela do celular */
 nav ul {
+  /* elimina ponto antes dos itens */
   list-style: none;
   background-color: rgba(52, 53, 56, 0.95);
+  /* altura para tela inteira */
   height: 100vh;
+  /* quando utiliza position: fixed, esse elemento não interage com outros elementos, ele fica uma camada acima demais elementos */
   position: fixed;
   top: 60px;
+  /* para esconder menu */
   right: -65%;
   width: 65%;
   transition: all 0.5s;
 }
 
+/* para associar check do menu com ul */
 #check:checked~ul {
   right: 0;
 }
 
+/* configuração da caixa do item */
 nav ul li {
+  /* espaço entre os itens */
   padding: 20px;
+  /* cor da borda */
   border-bottom: 1px solid #a9a9a9;
   text-align: right;
 }
 
+/* configuração do link do item */
 nav ul li a {
+  /* eliminar sublinhado */
   text-decoration: none;
   color: #fff;
 }
 
+
 /* Destaque */
 main {
+  /* 51vh equivale a 51% da tela, indenpendente do dispositivo*/
   height: 51vh;
+
+  /* inserir uma imagem no fundo */
   background: url(img/banner.jpg);
+
+  /* para cobrir imagem a tela do dispositivo */
   background-size: cover;
   background-position: center;
+
+  /* S */
   color: #fff;
+
+  /* técnica para centralizar, tanto na horizontal e no vertical, em uma coluna de elementos */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -396,7 +444,7 @@ footer a {
   /* Layout */
   .Container {
     max-width: 960px;
-  } 
+  }
 }
 
 /* PC >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
@@ -423,15 +471,25 @@ footer a {
   }
 
   nav ul {
+    /* usando position: static, ele ignora position: fixed, top:, right: do css anterior */
     position: static;
+
     width: 100%;
+
+    /* ele retira altua maxima do documento para automático, la na tela do celular estava height: 100vh; */
     height: auto;
+
+    /* para deixar sem cor do backgroud */
     background-color: transparent;
+
+    /* para descer os elementos com relação margem do topo*/
     margin-top: 40px;
   }
 
   nav ul li {
+    /* os elementos vão flutuar a esquerda */
     float: left;
+    /* retirar as bordas */
     border: 0;
   }
 
@@ -439,6 +497,7 @@ footer a {
     color: #343538;
   }
 
+  /* quando coloca mouse em cima dos links muda para vermelho */
   nav ul li a:hover {
     color: #c00000;
   }
@@ -454,6 +513,7 @@ footer a {
 
   /* Sobre */
   #sobre {
+    /* efeito de rolagem parallax */
     background-attachment: fixed;
   }
 

@@ -23,5 +23,3 @@ git push
 
 para sincronizar no git e no github:
 git pull
-
-
